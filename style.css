@@ -1,0 +1,84 @@
+ /* ================================
+   FAZAN OVERLAY — CENTRAT 100%
+   ================================ */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;   /* centrează pe orizontală */
+    align-items: center;       /* centrează pe verticală */
+    height: 100vh;             /* ocupă tot ecranul */
+    overflow: hidden;          /* nimic nu iese în afară */
+}
+
+/* Container general */
+#fazan-container {
+    width: 90vw;               /* se adaptează la ecran */
+    max-width: 900px;          /* nu devine prea mare */
+    text-align: center;        /* totul centrat */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Literele rundei */
+#fazan-letters {
+    font-size: 10vw;           /* responsive */
+    max-font-size: 120px;
+    font-weight: 900;
+    color: #00eaff;
+    text-shadow: 0 0 20px #00eaff, 0 0 40px #00eaff;
+    letter-spacing: 8px;
+    margin-bottom: 10px;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Ultimul cuvânt valid */
+#fazan-word {
+    font-size: 4vw;
+    max-font-size: 60px;
+    font-weight: 700;
+    color: #ffea00;
+    text-shadow: 0 0 15px #ffea00;
+    margin-bottom: 10px;
+}
+
+/* Status / mesaje */
+#fazan-status {
+    font-size: 2.5vw;
+    max-font-size: 40px;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 0 0 10px #000;
+    margin-bottom: 10px;
+}
+
+/* Timer */
+#fazan-timer {
+    font-size: 6vw;
+    max-font-size: 80px;
+    font-weight: 900;
+    color: #ff4444;
+    text-shadow: 0 0 20px #ff0000;
+    margin-top: 10px;
+}
+
+/* Scor jucător — ADAUGAT, NU MODIFICĂ NIMIC ALTCEVA */
+#fazan-score {
+    font-size: 32px;
+    font-weight: 700;
+    color: #00ff88;
+    text-shadow: 0 0 12px #00ff88;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Animație puls */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.08); opacity: 0.85; }
+    100% { transform: scale(1); opacity: 1; }
+}
