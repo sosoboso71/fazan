@@ -307,16 +307,15 @@ function handleCommand(username, message) {
 function onChatMessage(username, message) {
     const clean = message.trim();
 
+    // Comenzi (încep cu .)
     if (clean.startsWith(".")) {
         handleCommand(username, clean);
         return;
     }
 
-    if (clean.startsWith("#")) {
-        const word = clean.substring(1).trim().toLowerCase();
-        processPlayerWord(username, word);
-        return;
-    }
+    // Orice alt mesaj = cuvânt pentru joc
+    const word = clean.toLowerCase();
+    processPlayerWord(username, word);
 }
 
 // -----------------------------
